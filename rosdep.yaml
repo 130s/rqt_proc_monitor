@@ -1,0 +1,6 @@
+python-psutil:
+  ubuntu:
+    precise: python-psutil
+    quantal: python-psutil
+    raring: python-psutil
+
