@@ -1,6 +1,9 @@
-python-psutil:
+psutil:
   ubuntu:
-    precise: python-psutil
-    quantal: python-psutil
+    precise:
+      pip:
+        packages: [psutil]
+    quantal: |
+      echo "Install python-psutil on Quantal"
+      sudo apt-get install python-psutil
     raring: python-psutil
-
