@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>rqt_top</name>
+  <name>rqt_proc_monitor</name>
   <version>0.2.16</version>
   <description>RQT plugin for monitoring ROS processes. 
   </description>
@@ -10,9 +10,9 @@
   <maintainer email="isao.saito@mavs.uta.edu">Isaac Saito</maintainer>
   <license>BSD</license>
   
-  <url type="website">http://ros.org/wiki/rqt_top</url>
-  <url type="repository">https://github.com/ros-visualization/rqt_top</url>
-  <url type="bugtracker">https://github.com/ros-visualization/rqt_top/issues</url>
+  <url type="website">http://ros.org/wiki/rqt_proc_monitor</url>
+  <url type="repository">https://github.com/ros-visualization/rqt_proc_monitor</url>
+  <url type="bugtracker">https://github.com/ros-visualization/rqt_proc_monitor/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 
