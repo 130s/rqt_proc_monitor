@@ -30,7 +30,7 @@ import sys
 
 import roslib
 
-pkg = 'rqt_top'
+pkg = 'rqt_top.'
 roslib.load_manifest(pkg)
 
 from rqt_gui.main import Main

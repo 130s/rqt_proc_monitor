@@ -38,7 +38,7 @@ import re
 from threading import RLock
 import textwrap
 
-class RosTop(Plugin):
+class Top(Plugin):
 
     node_fields   = [             'pid', 'get_cpu_percent', 'get_memory_percent', 'get_num_threads']
     out_fields    = ['node_name', 'pid', 'cpu_percent',     'memory_percent',     'num_threads'    ]
@@ -54,9 +54,9 @@ class RosTop(Plugin):
     name_filter = re.compile('')
 
     def __init__(self, context):
-        super(RosTop, self).__init__(context)
+        super(Top, self).__init__(context)
         # Give QObjects reasonable names
-        self.setObjectName('RosTop')
+        self.setObjectName('Top')
 
         # Process standalone plugin command-line arguments
         from argparse import ArgumentParser
@@ -167,7 +167,11 @@ class RosTop(Plugin):
 
     def restore_settings(self, plugin_settings, instance_settings):
         self._filter_box.setText(instance_settings.value('filter_text'))
-        self._regex_box.setCheckState(Qt.CheckState(instance_settings.value('is_regex')))
+        is_regex_int = instance_settings.value('is_regex')
+        if is_regex_int:
+            self._regex_box.setCheckState(Qt.CheckState(is_regex_int))
+        else:
+            self._regex_box.setCheckState(Qt.CheckState(0))
         self.update_filter()
 
     #def trigger_configuration(self):
